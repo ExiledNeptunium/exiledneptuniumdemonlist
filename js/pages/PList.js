@@ -69,6 +69,9 @@ export default {
                     <p>
                         All placements are MY OPINION!! If you disagree with any of these placements I legit don't care!
                     </p>
+                    <p>
+                        BTW I literally don't have any platformer demons completed so yeah thats why theres nothing here LOL!!!!!!
+                    </p>
                 </div>
             </div>
         </main>
