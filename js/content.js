@@ -37,6 +37,38 @@ export async function fetchList() {
     }
 }
 
+export async function fetchPlist() {
+    try {
+        const plistResult = await fetch(`${dir}/_plist.json`);
+        const plist = await plistResult.json();
+
+        const results = await Promise.all(
+            plist.map(async (path, rank) => {
+                try {
+                    const levelResult = await fetch(`${dir}/${path}.json`);
+                    const level = await levelResult.json();
+                    return {
+                        rank: rank + 1,
+                        path,
+                        details: {
+                            ...level,
+                            records: level.records.sort((a, b) => b.percent - a.percent),
+                        },
+                    };
+                } catch {
+                    console.error(`Failed to load plist entry #${rank + 1} (${path}).`);
+                    return { rank: rank + 1, path, error: true };
+                }
+            })
+        );
+
+        return { type: "plistData", entries: results };
+    } catch {
+        console.error(`Failed to load plist.`);
+        return { type: "plistData", entries: [] };
+    }
+}
+
 export async function fetchEditors() {
     try {
         const editorsResults = await fetch(`${dir}/_editors.json`);
