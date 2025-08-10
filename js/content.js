@@ -5,12 +5,45 @@ import { round, score } from './score.js';
  */
 const dir = '/data';
 
+// demons
 export async function fetchList() {
     const listResult = await fetch(`${dir}/_list.json`);
     try {
         const list = await listResult.json();
         return await Promise.all(
             list.map(async (path, rank) => {
+                const levelResult = await fetch(`${dir}/${path}.json`);
+                try {
+                    const level = await levelResult.json();
+                    return [
+                        {
+                            ...level,
+                            path,
+                            records: level.records.sort(
+                                (a, b) => b.percent - a.percent,
+                            ),
+                        },
+                        null,
+                    ];
+                } catch {
+                    console.error(`Failed to load level #${rank + 1} ${path}.`);
+                    return [null, path];
+                }
+            }),
+        );
+    } catch {
+        console.error(`Failed to load list.`);
+        return null;
+    }
+}
+
+//pemons
+export async function fetchList() {
+    const plistResult = await fetch(`${dir}/_plist.json`);
+    try {
+        const plist = await plistResult.json();
+        return await Promise.all(
+            plist.map(async (path, rank) => {
                 const levelResult = await fetch(`${dir}/${path}.json`);
                 try {
                     const level = await levelResult.json();
