@@ -74,7 +74,7 @@ export default {
         </main>
     `,
     data: () => ({
-        list: [],
+        plist: [],
         editors: [],
         loading: true,
         selected: 0,
@@ -84,7 +84,7 @@ export default {
     }),
     computed: {
         level() {
-            return this.list[this.selected][0];
+            return this.plist[this.selected][0];
         },
         video() {
             if (!this.level.showcase) {
@@ -100,17 +100,17 @@ export default {
     },
     async mounted() {
         // Hide loading spinner
-        this.list = await fetchList();
+        this.plist = await fetchPList();
         this.editors = await fetchEditors();
 
         // Error handling
-        if (!this.list) {
+        if (!this.plist) {
             this.errors = [
                 "Failed to load list. Retry in a few minutes or notify list staff.",
             ];
         } else {
             this.errors.push(
-                ...this.list
+                ...this.plist
                     .filter(([_, err]) => err)
                     .map(([_, err]) => {
                         return `Failed to load level. (${err}.json)`;
