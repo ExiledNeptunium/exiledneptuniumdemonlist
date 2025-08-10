@@ -79,6 +79,8 @@ export default {
                     <p>
                         All placements are MY OPINION!! If you disagree with any of these placements I legit don't care!
                     </p>
+                    <p>
+                        A lot of these completions are from YEARS ago so for the most part I would've forgotten them. So that's why some opinions may be a bit shorter. That or I just don't care about the level.
                 </div>
             </div>
         </main>
