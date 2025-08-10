@@ -43,16 +43,16 @@ export default {
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
                     <ul class="stats">
                         <li>
-                            <div class="type-title-sm">Points when completed</div>
-                            <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
+                            <div class="type-title-sm">Date of Completion</div>
+                            <p>{{ level.enjoyment }}</p>
                         </li>
                         <li>
-                            <div class="type-title-sm">ID</div>
-                            <p>{{ level.id }}</p>
+                            <div class="type-title-sm">Attempts</div>
+                            <p>{{ level.attempts }}</p>
                         </li>
                         <li>
-                            <div class="type-title-sm">Password</div>
-                            <p>{{ level.password || 'Free to Copy' }}</p>
+                            <div class="type-title-sm">Enjoyment</div>
+                            <p>{{ level.enjoyment }}</p>
                         </li>
                     </ul>
                 </div>
