@@ -44,7 +44,7 @@ export default {
                     <ul class="stats">
                         <li>
                             <div class="type-title-sm">Date of Completion</div>
-                            <p>{{ level.enjoyment }}</p>
+                            <p>{{ level.date }}</p>
                         </li>
                         <li>
                             <div class="type-title-sm">Attempts</div>
