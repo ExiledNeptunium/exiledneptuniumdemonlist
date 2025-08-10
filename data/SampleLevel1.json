@@ -10,6 +10,8 @@
     "date": "example",
     "attempts": "number",
     "enjoyment": "nope",
+    "wf": "1%",
+    "opinion": "Sonic Wave is harder than this",
     "records": [
     ]
 }
