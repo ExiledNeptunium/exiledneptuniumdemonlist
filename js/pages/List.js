@@ -59,6 +59,12 @@ export default {
                             <p>{{ level.wf }}</p>
                         </li>
                     </ul>
+                    <h2>Level Opinion</h2>
+                    <ul class="stats">
+                        <li>
+                            <p>{{ level.opinion }}</p>
+                        </li>
+                    </ul>
                 </div>
                 <div v-else class="level" style="height: 100%; justify-content: center; align-items: center;">
                     <p>(ノಠ益ಠ)ノ彡┻━┻</p>
