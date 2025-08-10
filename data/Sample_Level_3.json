@@ -1,24 +1,17 @@
 {
     "id": 57436521,
-    "name": "Sample Level 3",
-    "author": "Different Publisher",
-    "creators": ["Solo_Creator"],
-    "verifier": "Solo_Creator",
-    "verification": "https://www.youtube.com/watch?v=ISTl28wKSXc",
+    "name": "Bloodlust",
+    "author": "knobbelboy",
+    "creators": ["TMNGaming", "Rustam", "Terron", "nikroplays", "Namtar", "Willy5000", "Xaro", "Panman", "Havok", "knobbelboy", "nwolc", "Manix648", "Wabbit", "non4med", "Minesap", "Quasar"],
+    "verifier": "knobbelboy",
+    "verification": "https://www.youtube.com/watch?v=n4U2wDaLjFs",
     "percentToQualify": "100",
-    "password": "46290",
+    "password": "Free To Copy",
+    "date": "February 21st, 2025",
+    "attempts": "67,635",
+    "enjoyment": "10/10",
+    "wf": "90%",
+    "opinion": "The very level that inspired me to start my GD career. The Golden was #2 when I first came back to the community. This level got VERY consistent for me towards the end, and it is balanced well for each parts intensity.",
     "records": [
-        {
-            "user": "Sample_Victor_1",
-            "link": "https://www.youtube.com/watch?v=MgJeijBGKHU",
-            "percent": 100,
-            "hz": 360
-        },
-        {
-            "user": "Sample_Victor_2",
-            "link": "https://www.youtube.com/watch?v=MgJeijBGKHU",
-            "percent": 100,
-            "hz": 120
-        }
     ]
 }
