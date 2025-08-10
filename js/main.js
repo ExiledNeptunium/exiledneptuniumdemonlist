@@ -21,18 +21,6 @@ export const store = Vue.reactive({
         }
     }
 
-(async () => {
-    // If the URL is bare or root, redirect to first level
-    const hash = window.location.hash;
-    if (hash === '' || hash === '#/') {
-        const plist = await fetchList();
-        const firstLevelName = plist?.[0]?.[0]?.name;
-        if (firstLevelName) {
-            const encoded = encodeURIComponent(firstLevelName);
-            window.location.hash = `#/plist/${encoded}`;
-        }
-    }
-    
     // Init app only after checking or redirecting
     const app = Vue.createApp({
         data: () => ({ store }),
