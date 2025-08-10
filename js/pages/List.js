@@ -54,6 +54,10 @@ export default {
                             <div class="type-title-sm">Enjoyment</div>
                             <p>{{ level.enjoyment }}</p>
                         </li>
+                        <li>
+                            <div class="type-title-sm">Worst Fail</div>
+                            <p>{{ level.wf }}</p>
+                        </li>
                     </ul>
                 </div>
                 <div v-else class="level" style="height: 100%; justify-content: center; align-items: center;">
