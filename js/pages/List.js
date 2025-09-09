@@ -59,6 +59,16 @@ export default {
                             <p>{{ level.wf }}</p>
                         </li>
                     </ul>
+                    <ul class="stats">
+                        <li>
+                            <div class="type-title-sm">Hardest Part</div>
+                            <p>{{ level.hard }}</p>
+                        </li>
+                        <li>
+                            <div class="type-title-sm">Input Device</div>
+                            <p>{{ level.device }}</p>
+                        </li>
+                    </ul>
                     <h2>Level Opinion</h2>
                     <ul class="stats">
                         <li>
