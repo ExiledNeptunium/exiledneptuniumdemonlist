@@ -69,10 +69,10 @@ export default {
                             <p>{{ level.device }}</p>
                         </li>
                     </ul>
-                    <h2>Level Opinion</h2>
                     <ul class="stats">
                         <li>
-                            <p>{{ level.opinion }}</p>
+                            <div class="type-title-sm">Personal Ranking When Beaten</div>
+                            <p>{{ level.beatenrank }}</p>
                         </li>
                     </ul>
                 </div>
